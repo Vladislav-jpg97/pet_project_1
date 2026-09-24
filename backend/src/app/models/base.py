@@ -1,6 +1,6 @@
 from sqlalchemy.orm import DeclarativeBase
 
-from app.models.mixins import IdentityMixin
+from .mixins import IdentityMixin
 
 
 class Base(DeclarativeBase,IdentityMixin):

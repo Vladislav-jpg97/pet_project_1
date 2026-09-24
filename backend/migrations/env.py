@@ -8,14 +8,16 @@ from sqlalchemy import pool
 from sqlalchemy.engine import Connection
 from sqlalchemy.ext.asyncio import async_engine_from_config
 
+
+
 # Добавляем папку src в sys.path, чтобы Alembic видел пакет app
 sys.path.append(str(Path(__file__).resolve().parent.parent / "src"))
-
-from app.core.configs import settings
-from app.models import *
-
 # Импортируй модели здесь, чтобы Alembic видел их для автогенерации миграций
 # Например: from app.models.user import User  (или import app.models)
+from src.app.models import Base
+from src.app.core.configs import settings
+
+
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
