@@ -27,7 +27,7 @@ class Settings(BaseSettings):
     # Security & JWT
     secret_key: str
     algorithm: str = "HS256"
-    access_token_expire_minutes: int = 30
+    access_token_expire_minutes: int = 300
 
     # General
     base_url: str = "http://localhost:8001"
